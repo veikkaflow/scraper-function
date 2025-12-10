@@ -41,12 +41,6 @@ cd "C:\Users\Veikka\OneDrive\Desktop\flowbot 1.12"
 firebase deploy --only functions:scrape_website_simple
 ```
 
-## React-sovelluksen muutokset
-
-**EI TARVITA MUUTOKSIA!** 
-
-Funktio käyttää samaa funktionimeä (`scrape_website`) ja palauttaa saman datan, joten React-sovellus toimii ilman muutoksia.
-
 Jos haluat käyttää tätä versiota, päivitä `firebase.json`:
 
 ```json
@@ -77,21 +71,4 @@ venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 python -c "from main import scrape_website; print(scrape_website('https://example.com'))"
 ```
-
-## Ero Scrapy-versioon
-
-| Ominaisuus | Scrapy-versio | Yksinkertainen versio |
-|------------|---------------|----------------------|
-| Reactor-ongelmat | ❌ Ei toimi useilla kutsuilla | ✅ Toimii useilla kutsuilla |
-| Nopeus | Hitaampi käynnistys | Nopeampi käynnistys |
-| Riippuvuudet | Scrapy + Twisted | requests + BeautifulSoup |
-| Monimutkaisuus | Korkea | Matala |
-| API-yhteensopivuus | ✅ | ✅ |
-
-## Tulevaisuus
-
-Jos tarvitset monimutkaisempia scraping-ominaisuuksia (esim. JavaScript-renderöinti, useita sivuja), harkitse:
-- **Cloud Run** Scrapylle (uusi kontti joka kerta)
-- **Puppeteer/Playwright** JavaScript-renderöintiin
-- **Scrapy Cloud** hallittu palvelu
 
