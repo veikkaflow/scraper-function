@@ -1,14 +1,4 @@
-# Yksinkertainen Website Scraper - Firebase Functions
-
-Tämä on yksinkertainen versio website scraperista, joka käyttää `requests` + `BeautifulSoup` Scrapyn sijaan.
-
-## Miksi tämä versio?
-
-- ✅ **Ei reactor-ongelmia**: Toimii useilla peräkkäisillä kutsuilla
-- ✅ **Yksinkertaisempi**: Vähemmän riippuvuuksia ja monimutkaisuutta
-- ✅ **Nopeampi**: Nopeampi käynnistysaika
-- ✅ **Sama API**: Palauttaa saman datan kuin Scrapy-versio
-
+# Testi scraper, flowbotin käytössä
 ## Rakenne
 
 ```
